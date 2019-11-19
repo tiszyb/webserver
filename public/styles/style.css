@@ -1,0 +1,380 @@
+body{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-family:arial,arial narrow,sans-serifs;
+}
+
+/* header styles start */
+header{
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: white;
+  box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+  border-bottom: 1px solid #e6e6e6;
+	z-index: 3;
+}
+.logo{
+  /* border: solid 2px red; */
+  padding: 17px 0px;
+  margin: 0px 50px;
+
+}
+.menu{
+  padding: 17px 0px;
+  display: flex;
+  margin-right: 50px;
+  /* border: black 1px solid; */
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  flex-direction: row;
+}
+.nav li a {
+  text-decoration:none;
+	color: red;
+	display:block;
+	padding: 5px 5px;
+  font-size:15px;
+}
+.nav li a:hover{
+	text-decoration: underline;
+}
+
+.navbar-toggle {
+	float: left;
+	background-color: linear-gradient(#fff,#ddd);
+	border: 1px black solid;
+	border-radius: 4px;
+	padding: 5px 5px;
+	height: 25px;
+	display: none;
+	position: fixed;
+}
+.navbar-toggle:hover {
+	border: 1px #CCC solid;
+	background: #ccc;
+}
+.navbar-toggle:hover > div {
+	background: #fff;
+}
+.navbar-toggle:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+.navbar-toggle  > div {
+	width: 25px;
+	height: 4px;
+	background: #333;
+	margin: 4px 0px;
+	border-radius: 4px;
+	transition: border 0.9s linear 0s;
+}
+
+
+/*header styles ending  */
+
+/*panel styles start  */
+.cp {
+	position: fixed;
+	left: -260px;
+	top: 0px;
+	width: 260px;
+	height: 100%;
+	background: #ccc;
+	opacity: 0;
+	transition: opacity 0.9s linear 0s, left 0.3s linear 0s;
+	cursor: pointer;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+}
+.cp-sign{
+	border-bottom: 2px dashed #999;
+	padding: 15px 10px;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+	font-family: sans-serifs;
+}
+.cp-sign:hover{
+	opacity: .5;
+	border-left: 4px solid #555;
+}
+
+
+/*panel styles ending */
+
+
+/* container styles start  */
+.container{
+    background: url(../img/bg1.jpg) fixed center no-repeat;
+    background-size: cover;
+    min-height: 650px;
+		display: flex;
+		justify-content: center;
+}
+.form-cover{
+	margin: 40px 0px;
+	background-color: #d9d9d9;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 10px;
+	opacity: .9;
+	width: 70%;
+}
+.input-cover{
+	display: flex;
+	flex-direction: column;
+	margin: 20px 0px;
+	width: 40%;
+}
+input{
+	margin: 5px 0px;
+	height: 30px;
+	border-radius: 5px;
+	padding: 5px;
+	border: 1px solid #CCC;
+}
+input:hover{
+	border: 1px blue solid;
+	border-radius: 6px;
+}
+label{
+	margin: 20px 0px 0px 0px;
+	color: #1a1a1a;
+}
+.spn_must_field {
+    color: red;
+}
+.btn{
+	width: 100%;
+	height: 50px;
+	margin: 20px 0px;
+	background: transparent;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 2px solid #CCC;
+	font-weight: bold;
+}
+.btn:hover{
+	background: black;
+	color: white;
+	border: 1px solid blue;
+	transition: background 0.5s linear 0s;
+}
+
+.btn2{
+	color: inherit;
+	background: transparent;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 2px solid #CCC;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 10px;
+}
+.btn2:hover{
+	background: black;
+	color: white;
+	border: 2px solid blue;
+	transition: background 0.5s linear 0s;
+}
+
+/* container styles end  */
+
+
+/*how it works styles start  */
+.howitworks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: serif;
+  background-color: #d9d9d9;
+}
+.howitworks h2{
+  text-align: center;
+  margin: 50px auto;
+}
+
+.story{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+.storyicon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.storyicon img{
+  min-height: 90px;
+}
+/* how it works styles ending */
+
+
+/*Footer styles start */
+footer{
+  background-color: #1a1a1a;
+  min-height: 200px;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+.footer-top{
+  height: 200px;
+  /* border: green 1px solid; */
+}
+.footer-bottom{
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.icons{
+  width: 90%;
+  border-top: 1px solid white;
+  margin: auto;
+  text-align: center;
+}
+.Copyright{
+  margin: 20px auto;
+}
+
+.fa, .icons a{
+  padding:20px;
+  font-size:30px;
+  color: white;
+  text-decoration: none;
+}
+.icons a:hover{
+  color: #ccc;
+  text-decoration: none;
+}
+
+/* Footer styles end */
+
+/* container-board styles start  */
+.container-board{
+	width: 80%;
+	background: white ;
+	display: flex;
+	margin: 30px auto;
+}
+.quicklinks{
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #d9d9d9;
+	height: 300px;
+}
+.quicklinks h2{
+	cursor: pointer;
+	margin-top: -1px;
+	padding: 15px;
+	box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.2);
+}
+.quicklinks a{
+	text-decoration: none;
+	color: inherit;
+	padding: 15px;
+	cursor: pointer;
+}
+.quicklinks a:hover{
+	border-right: 10px solid #d9d9d9;
+	box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+}
+
+.board{
+	margin: 0px 15px;
+	border: 1px solid #d9d9d9;
+	display: flex;
+	flex-direction: column;
+	width: 78%;
+}
+.board h2{
+	cursor: pointer;
+	margin-top: -1px;
+	padding: 15px;
+	box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.2);
+}
+.board-row{
+	margin: 10px;
+	padding: 5px;
+	display: flex;
+}
+.meal-name{
+	font-weight: bold;
+	padding: 0px 5px;
+}
+.board-row img{
+	border: 1px solid #d9d9d9;
+	border-radius: 3px;
+	padding: 2px;
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+}
+.order-btn{
+	height: 40px;
+	width: 100px;
+	cursor: pointer;
+	margin-top: 45px;
+	margin-left:  -82px;
+	background: transparent;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 1px solid #d9d9d9;
+	font-weight: bold;
+}
+.order-btn:hover, .order-btn:focus{
+	color: #d9d9d9;
+	border: 2px solid  #d9d9d9;
+	transition: border 0.1s linear 0s;
+	border-radius: 5px;
+}
+
+/* container-board styles end  */
+
+
+@media (max-width: 600px) {
+	.logo img{
+		width: 60%;
+	}
+	.navbar-toggle{
+		display: block;
+	}
+	.nav li{
+		display: none;
+	}
+	.input-cover{
+		display: flex;
+		flex-direction: column;
+		margin: 20px 0px;
+		width: 80%;
+	}
+	input{
+		margin: 5px 0px;
+		height: 25px;
+		border-radius: 5px;
+		padding: 5px;
+		border: 1px solid #CCC;
+	}
+	.btn{
+		width: 100%;
+		height: 35px;
+		margin: 20px 0px;
+		background: transparent;
+		cursor: pointer;
+		border-radius: 5px;
+		border: 2px solid #CCC;
+		font-weight: bold;
+	}
+
+
+}

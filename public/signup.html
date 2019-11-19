@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Meal Booking App</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link  rel="stylesheet" href="/styles/style.css">
+    <script type="text/javascript" src="../js/main.js"> </script>
+
+  </head>
+  <body >
+    <header>
+        <div class="logo">
+          <img src="../img/logo.png" alt="" height="45">
+        </div>
+        <div class="menu">
+          <ul class="nav">
+            <div class="navbar-toggle" onclick="toggleCP()">
+              <div class="icon-bar"></div>
+              <div class="icon-bar"></div>
+              <div class="icon-bar"></div>
+            </div>
+             <li id="sign" class="active"> <a href="signup.html" >SIGN UP</a></li>
+             <li id="sign"> <a href="#"> | </a></li>
+             <li id="sign"> <a href="signin.html"> SIGN IN</a></li>
+          </ul>
+        </div>
+    </header>
+
+    <div class="cp">
+      <a class="cp-sign" href="signup.html"> SIGN UP </a>
+      <a class="cp-sign" href="signin.html"> SIGN IN </a>
+    </div>
+
+    <div id="dd" class="container">
+      <div class="form-cover">
+        <h1>Create An Account</h1>
+        <div class="input-cover">
+          <label for="firstname">First Name<span class="spn_must_field">*</span></label>
+          <input type="text" name="firstname" placeholder="John">
+
+          <label for="lastname">Last Name<span class="spn_must_field">*</span></label>
+          <input type="text" name="lastname" placeholder="Doe">
+
+          <label for="email">Email Address<span class="spn_must_field">*</span></label>
+          <input type="text" name="email" placeholder="JohnDoe@domain.com">
+
+          <label for="pass">Password<span class="spn_must_field">*</span></label>
+          <input type="password" name="pass" placeholder="****************">
+
+          <label for="Password">Confirm Password<span class="spn_must_field">*</span></label>
+          <input type="password" name="confirmpass" placeholder="****************">
+          <button type="button" name="button" class="btn"> SIGN UP </button>
+        </div>
+
+        <h2>Already A Member ?</h2>
+        <p>SIGN IN now and start tracking your live orders as it reaches you.
+          Experience the next level of food ordering.</p>
+        <a href="signin.html" class="btn2">SIGN IN</a>
+
+      </div>
+    </div>
+
+    <div class="howitworks">
+      <h2>HOW IT WORKS </h2>
+      <div class="story">
+
+        <div class="storyicon">
+          <img src="img/reg.svg" alt="">
+          <p>Create Your Account</p>
+        </div>
+
+        <div class="storyicon">
+          <img src="img/order.svg" alt="">
+          <p>Make Your Order </p>
+        </div>
+
+        <div class="storyicon">
+          <img src="img/enj.svg" alt="">
+          <p>Enjoy Your Meal</p>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-top">
+
+      </div>
+      <div class="footer-bottom">
+        <div class="icons">
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </div>
+        <div class="Copyright">
+          Copyright © 2019 - Meal Booking App
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
