@@ -17,18 +17,21 @@ app.use(express.static(pathToFile))
 
 app.get('', (req, res) => {
     res.render('index', {
-        title : 'Meal Booking App'
+        title : 'Weather App',
+        topic : 'Welcome to my Weather App'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title : 'Meal Booking App'
+        title : 'About Us',
+        topic : 'Welcome to my Weather App'
     })
 })
 app.get('/help', (req, res) => {
     res.render('help', {
-        title : 'Meal Booking App'
+        title : 'Help',
+        topic : 'Welcome to my Weather App'
     })
 })
 
