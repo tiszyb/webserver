@@ -7,14 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   	<link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link  rel="stylesheet" href="/styles/style.css">
-    <script type="text/javascript" src="../js/main.js"> </script>
+    <script type="text/javascript" src="../js/main.js" async> </script>
 
   </head>
   <body >
     {{>header}}
 
     <div id="dd" class="container">
+      <div class="form-cover">
         <h1>{{topic}}</h1>
+        <div class="input-cover">
+          <input id="location" type="text" name="location" placeholder="Location">
+          <button id="btnn" type="button" name="button" class="btn"> Search </button>
+        </div>
+        <div class="storyicon">
+          
+        </div>
+      </div>
     </div>
 
    {{>footer}}
