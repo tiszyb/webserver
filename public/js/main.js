@@ -25,11 +25,11 @@ const request = (body) => {
 const forecast = async() => {
   const data =  document.querySelector("#location").value;
   const url = "/weather?address="+data;
-  alert(url);
+  //alert(url);
   let Response = await fetch(url);
   if(Response.ok){   
     Response = await Response.json();
-    if(Response.error){ return console.log(Response.error)}
+    if(Response.error){ return document.querySelector(".storyicon").innerHTML = Response.error;	}
     console.log(Response);
     document.querySelector(".storyicon").innerHTML = Response.forecast+'<br>'+ Response.location;
   }		
