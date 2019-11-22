@@ -24,15 +24,19 @@ const request = (body) => {
 
 const forecast = async() => {
   const data =  document.querySelector("#location").value;
+  const output = document.querySelector(".storyicon");
   const url = "/weather?address="+data;
-  //alert(url);
+
+  output.innerHTML = "";
+  output.innerHTML = "loading...."; 
   let Response = await fetch(url);
-  if(Response.ok){   
+  
+  if(Response.ok){       
     Response = await Response.json();
     if(Response.error){ return document.querySelector(".storyicon").innerHTML = Response.error;	}
     console.log(Response);
-    document.querySelector(".storyicon").innerHTML = Response.forecast+'<br>'+ Response.location;
-  }		
+    output.innerHTML = Response.forecast+'<br>'+ Response.location;
+  } 
 }
 document.querySelector("#btnn").addEventListener("click", forecast)
 
