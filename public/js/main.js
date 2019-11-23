@@ -9,8 +9,18 @@ const toggleCP = () => {
     cp.style.opacity = 1;
   }
 }
+const toggleOff = () => {
+  const cp = document.querySelector('.cp');
+  //alert(cp);
+  if(cp.style.opacity == 1){
+    cp.style.opacity = 0;
+    cp.style.left = "-260px"; // remove it from active screen space
+  } 
+}
 function _(x){
-	return document.getElementById(x);
+  if(document.querySelector(x)){
+    return document.querySelector(x);
+  }
 }
 const request = (body) => {
 	return obj = {
@@ -19,8 +29,13 @@ const request = (body) => {
 		body: body
 	};
 }
-
-
+function myFunction() {
+  const cp =_('.cp');
+  if(window.outerWidth > 700 || window.outerWidth < 850){
+    cp.style.opacity = 0;
+    cp.style.left = "-260px"; // remove it from active screen space
+  }  
+}
 
 const forecast = async() => {
   const data =  document.querySelector("#location").value;
@@ -38,6 +53,16 @@ const forecast = async() => {
     output.innerHTML = Response.forecast+'<br>'+ Response.location;
   } 
 }
-document.querySelector("#btnn").addEventListener("click", forecast)
+var el = _("#btnn");
+if(el){
+  el.addEventListener('click', forecast, false);
+}
+
+var elem = _(".container");
+if(elem){
+  elem.addEventListener('click', toggleOff, false);
+}
+window.addEventListener("resize", myFunction);
+
 
 
