@@ -11,3 +11,4 @@ ssh -T git@github.com                                   (this is to aunthemticat
 HEROKU CONFIG
 heroku keys:add                                         (this is used to ssh key to heroku)
 heroku create tiszy-weatherapp                          (create app name, and also creates herokus git remote directory. use git remote to figure it out)
+heroku git:remote -a tiszy-weatherapp                   (For an existing heroku app)
