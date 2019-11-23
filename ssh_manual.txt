@@ -1,8 +1,9 @@
 GIT SSH CONFIG
-
+heroku login
 ls -a -l ~/.ssh                                         (search for SSH key in the system)
 ssh-keygen -t rsa -b 4096 -C "salawudeen_i@yahoo.com"   (Generates public/private rsa key pair.)
-$ ssh-add ~/.ssh/id_rsa                                 (adds identity to private rsa key pair)
+eval $(ssh-agent -s)                                    (use this to make ssh agent to start running on pc)
+ssh-add ~/.ssh/id_rsa                                   (adds identity to private rsa key pair)
 cat ~/.ssh/id_rsa.pub                                   (use this to get ssh key for rsa pub )
 ssh -T git@github.com                                   (this is to aunthemticate with github)
 
