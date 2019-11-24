@@ -4,7 +4,8 @@
   "description": "webserver",
   "main": "index.js",
   "scripts": {
-    "start" : "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs"
   },
   "author": "ibrahim",
   "license": "ISC",
@@ -22,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/tiszyb/webserver/issues"
   },
-  "homepage": "https://github.com/tiszyb/webserver#readme"
+  "homepage": "https://github.com/tiszyb/webserver#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
 }
